@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>תנאים</title>
+    <script>
+        function init()
+        {
+
+        }
+        function onbtnclick()/*פונקציה שמסמלת שברגע לחיצת כפתור תתבצע פונקציה. בפנים כמובן נאמר לן איזו פונקציה*/
+        {
+            chackAge()
+        }
+
+        function chackAge()/*הפונקציה תציג בהתאם למס המוקלד הודעות שונות על המסך*/
+        {
+            if(idinput.value<18 && idinput.value>=0)/*הסימן && מסמן תנאי נוסף*/
+            {
+                idh1.innerHTML="U R young. go to school!";
+            }
+            else if(idinput.value>=18 && idinput.value<29)
+            {
+                idh1.innerHTML="its time to party!!!!!";
+            }
+            else if(idinput.value >= 120 || idh1.value< 0) /* הסימן || מסמל תנאי שומר או זה או זה */
+            {
+                idh1.innerHTML="dont fool me";
+            }
+            else{
+                idh1.innerHTML="U Need to go for work!"
+            }
+        }
+
+    </script>
+</head>
+<body onload="init()">
+    <h1 id="idh1">welcom to condition world</h1>
+    <h2>enter your age:</h2>
+    <input type="text" id="idinput">
+    <br>
+    <button onclick="onbtnclick()">click here</button>
+    
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>איך מודולריות עוזרת לכתוב פחות שורות </title>
+    <script>
+        function init()
+        {
+            createSeries("The simpsons",30,99999);/*נרשום את הערכים לפי הסדר שנתנו אותם מטה :*/
+            createSeries("The wolking dead",12,99999);
+            createSeries("The simpsons",30,99999);
+        }
+
+        function createSeries(_name,_seasons,_views)/* נרשום קו בתחילת כל משתנה שנגדיר שנדע שהוא משתנה מתוך פונקציה*/
+        {
+            idbody.innerHTML+= "<h2>"+_name+"</h2>";
+            idbody.innerHTML+= "<div> Seasons: "+_seasons+" </div>";
+            idbody.innerHTML+= "<div>Views: "+_views+" </div>";
+
+           /* idbody.innerHTML+= "<h2>המומינים</h2>";/זאת הדרך הארוכה לרשום כל פעם שורה חדשה ולשנות משתנים
+            idbody.innerHTML+= "<div> Seasons:20 </div>";
+            idbody.innerHTML+= "<div>views :1000 </div>";
+
+            idbody.innerHTML+= "<h2>המתים המהלכים</h2>";
+            idbody.innerHTML+= "<div> Seasons:11 </div>";
+            idbody.innerHTML+= "<div>views :1000 </div>";*/
+
+
+
+        }
+
+    </script>
+</head>
+<body onload="init()" id="idbody" >
+    
+</body>
+</html>

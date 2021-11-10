@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> תנאי משולש סרטון29 דקה 5:40 TERNARY IF</title>
+    <script>
+        window.onload=function() { //כדי להפעיל את הסקריפט
+        }
+
+        function onchecktemp(){
+             var temp = id_input.value;
+             //נרשום תנאי שאם מעלות שמזין משתמש קטן מ28 יהיה קר וגבוהה מכך חם
+            // if(temp>28){
+            //     id_span.innerHTML = "HOT";
+            // }
+            // else{
+            //     id_span.innerHTML = "COLD";
+            //     }
+
+            //ניתן לרשום אותו דבר גם בצורה הבאה 
+             // Condition             TRUE                           FALSE    
+            //   (tem>28)   ?    id_span.innerHTML = "HOT" : id_span.innerHTML = "COLD";
+                //למצב זה יש חיסרון קטן כי אי אפשר לתת יותר מקפודה אחת (של הצגת הכיתוב חם או קר) בכל אחד מהאזורים
+ //כדי לפתור בעיה זו בעיה זו נוכל לרשום פונקציות נוספות שכל אחת תכיל כמה פקודותו= ונרשום אותם במקום המתאים בהתאם לדוגמא הקודמת
+
+                (temp > 28)    ?    changehot()  : changecold()               ;
+        }
+            function changehot(){
+                id_span.innerHTML="HOT";
+                id_span.style.background ="red";
+            }
+
+            function changecold(){
+                id_span.innerHTML="COLD";
+                id_span.style.background="blue";
+            }
+            
+    </script>
+</head>
+<body>
+    <h2>enter the temp of the room:</h2>
+    <input type="number" id="id_input" oninput="onchecktemp()">celziuce
+    <h2>the condition is <span id="id_span"></span></h2>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מודולרית שהתגיות כלולות בפונקציה</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif; }
+        div{height: 50px;width: 400px;border: 2px solid black;font-size:50px}
+        div p{text-align: center;margin:0 auto;}/*כדי לשים את הטקסט באמצע הדיב נשתמש בטקסט אליגן*/
+        </style>
+    <script>
+function init()
+{
+creatseries("vikings",6,100,"red");
+creatseries("hulk",5,659);
+
+
+}
+
+function creatseries(_name,_seasons,_views)
+{
+    id_body.innerHTML+="<h2>"+_name+"</h2>";
+    id_body.innerHTML+="<div><p>seasons:"+_seasons+"</p></div>";
+    id_body.innerHTML+="<div><p>views:"+_views+"</p></div>";
+}
+</script>
+</head>
+
+<body onload="init()" id="id_body">
+    <h2 class="idh2"></h2>
+    <div>
+    </div>
+</body>
+</html>

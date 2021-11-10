@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> עונה 3 סרטון 26 הוספת תגיות במיקום מסויים עי המשתמש</title>
+    <script>
+        var btn;
+        function init(){
+            btn=document.getElementById("id_btn")
+            onbtnclick();
+        }
+        function onbtnclick(){
+            // יצירת משתנה חדש שיוצר תגית באמצעות פקודה בשם יצירתאלמנט
+           var new_li = document.createElement("li");  //הקריאיית אלמנט אומר לדום ליצור אלמנט חדש ואת סוגו נרשום בסוגריים  
+             //document זה בעצם מסמל את הפנייה לדום שלנו
+
+           var new_name = document.getElementById("id_uname"); //ייתן למשתנה את הערך שיזין המשתמש באינפוט מטה
+          
+           new_li.innerHTML =id_uname.value;//הערך שיהיה כתוב ברשימה יהיה הערך שיוזן עי המשתמש באינפוט
+          
+          // document.getElementById("the_list").appendChild(new_li);//תוסיף ילד בשם אלאייחדש לתחתית הרשימה
+        
+        
+        //כדי לשלוט במיקום של הוספת השם לרשימה
+           var the_li = document.getElementById("the_list").getElementsByTagName("li") [1];//נתייחס לרשימה כמו אל מערך1 מסמל את השורה ה2 בגלל הטאג ניים 
+           document.getElementById("the_list").insertBefore(new_li,the_li);//אינסרט ביפור בסוגריים נכניס את מה שאני רוצה שיוצג ובשני ביחס למי התוכן ימוקם                                                          
+
+        }
+    </script>
+</head>
+<body onload="init()">
+    <div class="main">
+        <div class="txt_point">
+            <h1>רשימת תלמידים לקורס הקרוב</h1>
+            <strong>שמות האנשים שהצטרפו לקורס הם: </strong>
+            <ul id="the_list">
+                <li><strong>משה לוי</strong></li>
+                <li>כהן מאור </li>
+                <li>סגל אבי </li>
+                <li>חלפון רוני</li>
+                <li>איינשטיין מאור </li> 
+                <li>שלום מיכאל</li>
+            </ul>
+        </div>
+    </div>
+    <form action="">
+        <label for="">שם :</label>
+        <input type="text" id="id_uname" name="uname" value="">
+        <br>
+        <br>
+        <button type="button" id="id_btn" onclick="onbtnclick()">הוסף לרשימה</button>
+    </form>
+</body>
+</html>

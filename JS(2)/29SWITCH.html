@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCHפונקציית ה </title>
+    <script>
+ window.onload=function(){
+
+ }       //  כדי  להפעיל את הסקריפט ניתן גם לרשום כך:הנה
+
+function onchackday(){
+var day=idinput.value;
+//קונטרול סלאש איפה שהסימן שאלה למטה במקלדת יהפוך את כל שורה המסומנת להערה
+// if(day==1)  {idspan.innerHTML="ראשון"} 
+// else if(day==2)  {idspan.innerHTML="שני"}
+// else  {idspan.innerHTML="שבת"}
+
+switch(day){
+    case "1"://במצב שרושמים 1 תציג על המסך את המילה ראשון
+    idspan.innerHTML="ראשון";
+    break;
+    case "2":
+    idspan.innerHTML="שני";
+    break;
+    case "3":
+    idspan.innerHTML="שלישי";
+    break;
+
+    default:
+    idspan.innerHTML=" במידה ולא הזנת מס 1 2 או 3 דיפולט תהיה ברירית המחדל כמו אלס באיף ";
+    break;
+
+}
+
+}
+
+    </script>
+</head>
+<body>
+    <h1>enter the number of the day:</h1>
+    <input type="number" id="idinput" oninput="onchackday()"><!--יש פה אירוע חדש בשם אוןאינפוט ויפעל כאשר נזיןערך בתא-->
+    <h2>the name of the day is :<span id="idspan"></span></h2>
+    
+</body>
+</html>

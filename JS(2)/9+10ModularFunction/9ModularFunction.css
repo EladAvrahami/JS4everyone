@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    background-color: silver;
+    font-family: fantasy;
+    font-size: 20px;
+    direction: ltr;
+}
+
+.allsite{
+    max-width: 960px;
+    background-color: white;
+    margin: 0 auto;
+    height: 500px;
+}
+
+.box{
+    border: 2px solid black;
+    height: 80px;
+    width: 80px;
+    float: left;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>יוצרים מוצרים בעזרת אובייקטים- אובייקטים בסיסיים</title>
+    <style>div{border: 2px solid black;}
+            .products.product img{width: 100%;}
+    </style>
+    <script>
+    var product1;
+    var product2;
+    var product3;
+    var product4;
+
+    function init(){
+        createProducts()//בעצם זה יהיה הדיב שיכיל את כל הדיבים שבתוכם יהיה פרטים על כל משקה 
+        addProductToHtml();
+    }
+
+    function addProductToHtml(obj){
+        var newSection=document.createElement("section");//ניצור משתנה חדש ניוסקשין שייצור תגית מסוג סקשיין
+        newSection.className="product";//למשתנה ניוסקשיין ניתן את השם מוצר
+        products.appendChild(newSection);//בתוך הדיב שמכיל את כלל המוצרים נוסיף ילד שייצרנו בשורות הקודמות ניוסקשיין
+
+        newSection.innerHTML+="<h2>"+obj.name+"</h2>"//באמצעות האינהירט נכניס לניוסקשיין כותרת שהמלל שלה יהיה המלל של המאפיין שם באובייקט
+        
+        var newimg=document.createElement("img");
+        newimg.src="images/"+ obj.image
+        newSection.appendChild(newimg);
+
+        newSection.innerHTML+= "<div>"+obj.info+"</div>";//יכניס לסקשיין דיב המכיל בתוכו את תוכן האינפורמציה מהאובייקט מוצר 1
+        newSection.innerHTML+= "<div>"+obj.price+"</div>";//יכיל את המחיר מאובייקט בשם מוצר 1
+
+    }
+
+    function createProducts(){
+        product1={//צורת כתיבה של בניית אובייקט חוזרת על עצמה בכל 4 הדוגמאות שלהלן
+            name:"Cola",
+            image:"cola.png",
+            info:"coca cola with ice",
+            price:10,
+        }
+
+        product2={
+            name:"SPRITE",
+            image:"sprite.jpg",
+            info:"Sprite with ice",
+            price:8,
+        }
+
+        product3={
+            name:"FANTA",
+            image:"fanta.jpag",
+            info:"fanta with ice",
+            price:7,
+        }
+
+        product4={
+            name:"PEPSI",
+            image:"pepsi.jpag",
+            info:"pepsi no suger with ice",
+            price:9,
+        }
+
+        addProductToHtml(product1);
+        addProductToHtml(product2);
+        addProductToHtml(product3);
+        addProductToHtml(product4);
+    }
+
+    </script>
+</head>
+<body onload="init()">
+<div class="all_site">
+    <div class="products" id="products">
+
+
+        
+    </div>
+</div>
+    
+</body>
+</html>

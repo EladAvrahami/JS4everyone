@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> חלק שני בלמידה השפע על כמות הפעמים שיבוצע האינטרוול בעזרת תנאי(ללא שימוש בכפתור) </title>
+    <script>/*נוסיף תנאים על מנת לשלוט טוב יותר בטיימר בלחיצה על כפתור במסך */
+        var counter;/*ייבצע ספירה של כמות הפעמים ההצגה התרחשה*/
+        var timerindex;/*ישמש בהמשך על מנת לפנות לאינטרוול*/
+         function init(){
+            counter=0;/*נגדיר שמשתנה ספירה שווה 0*/
+            timerindex=setInterval(writeHello,2000)/*נשתמש בהשוואה הזאת כדי לתת לפקודת האינטרוול תז כדי לפנות אליה בהמשך*/
+        }
+        function writeHello(){
+            counter++;
+            if(counter>=5){/*תנאי זה אומר שבמידה והאינטרוול חזר על עצמו מעל5 פעמים תעצור בעזרת קליר את האינטרוול
+                אם לא בוצע מעל 5 פעמים תציג עוד שלום על המסך*/
+                clearInterval(timerindex);/*הקליר אינטרוול זו פקודה שעוצרת את כמות החזרות לאחר כל 2 שניות*/
+                /*הטיימר אינדקס שבסוגריים בעצם משמש כמעיין תז שאומר לקליר איזה אינטרוול לעצור במידה ויהיו כמה כאלו*/
+            }
+            id_h2.innerHTML+="hello , "
+        }
+
+
+    </script>
+</head>
+<body onload="init()">
+    <h2 id="id_h2"></h2>
+    <button onclick="">start</button>
+    
+</body>
+</html>

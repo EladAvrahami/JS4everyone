@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>שימוש בלולאות </title>
+    <script>
+        function init()
+        {
+            for(var i=1; i<9;i++)
+            {
+                id_h2.innerHTML += i*3+10+",";
+                id_body.innerHTML +="<img src='images/haircut"+i+".jpg'; width='200';>"
+                
+            }
+
+            /*6 id_body.innerHTML +="<img src='images/haircut"+i+".jpg'>"/*נשים את האיי בתןך גרשיים כפולות כדי שבעצם יהיה חלק מסטרינג 
+                וישנה תמונה בכל פעם שהלולאה תחזור על עצמה ץ*/
+                /*שים לב שמס התמונה יכלול בשם בהתחלה 0 כדי שלא יידלג עליה*/
+
+            /*5 id_body.innerHTML +="<img src='images/haircut1.jpg'>"/*יציג את התמונה שבחרתי 9 פעמים שים לב שהתמונה בתוך גרש אחד משני הצדדים*/
+            /* 4 id_h2.innerHTML +=" hello "+i+" world<br>";/*הפלוס מחבר סטרינגים רווח וירידת שורה רושמים איפה שהטקסט*/
+           /*3 id_h2.innerHTML +=" hello"+i;/*המס יעלה ב1 כל פעם שהלולאה תרוץ*/
+           /*2 id_h2.innerHTML +=" world<br>";/*+= יוסיף את המילה */
+
+            /*1 var i = 0;
+            while(i < 9)
+            {
+            id_h2.innerHTML +=" world";
+            i++
+            }*/
+        }
+    </script>
+</head>
+
+    
+<body onload="init()" id="id_body">
+<h1>עולם הלולאות כדי לקצר כתיבה של דברים שחוזרים על עצמם</h1>
+<h2 id="id_h2">Hello</h2>
+<img src="" alt="">
+</body>
+</html>

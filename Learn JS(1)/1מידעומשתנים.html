@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var st = "apple";//משתנה מסוג מחרוזת
+        console.log("apple is "+ typeof st);//הפקודה טייפאוף תציג לי מאיזה סוג המשתנה במקרה הזה - סטרינג
+       
+        var num=5;//יציג שמדובר במשתנה מסוג נאמבר
+        console.log("num is "+ typeof num);//שים לב כי בגאווה סריפט לא קיים משתנה מסוג אינט(מספרלא שלם)כולם ייחשבו  תחת נאמבר
+        
+        var bol=true;//משתנה בוליאני שהתשובה היא כן או לא 
+        console.log("bol is "+ typeof bol);//נקבל בקונסול לוג בדפדפן שבול הוא משתנה בוליאני
+
+        var un;//אנדיפיינד זה כשקוראים למשתנה שלא מוגדר
+        console.log("un is "+ typeof un);//בגלל שלא נתנו לו ערך בשורה קודמת יוצג כאן בסוגו כלא מוגדר
+
+        console.log("nul is "+typeof null);//נאל זה כאשר קוראים למשתנה שלא קיים 
+
+        //מערך שנקרא מאזדה ויש פרטים עליו בתוכה 
+        var mazda = ["mazda3",1992,"auto","red",1600];
+        var toyota = ["toyota",2009,"auto","blue",1600];
+
+
+        //הוספת מאפיינים לאובייקטים יקלו עלינו למוצא את הערכים שמופיעים בתוכם באמצעות שם או סימון 
+        //אובייקט בתבניתו דומה למערך
+
+        //בניית אובייקט -הכנסת מאפיין (יופיע אחרי הנקודה) למשתנה שנמצא בתוך האובייקט
+        var pejo= new Object();
+        pejo.model="107";//כאן לדוגמא המאפיין היא המילה מודל והמשתנה הוא 107
+        pejo.year="2010";
+        pejo.gear="auto";
+        pejo.color="yellow";
+        pejo.engine="1000";
+
+
+        //אופציה שניה לבניית אובייקט היא בצורת כתיבה זו
+        var bmw={
+            model: "bmw",
+            year: 2011,
+            gear: "auto",
+            color:"red",
+            engine:"2600"
+        }
+
+        //ניתן לראות את האובייקטים ומציאת ערכיהם בעזרת המאפייינים בקונסול שבדפדפן קונטרול שיפט איי ולחיצה על הקונסול
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

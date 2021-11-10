@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אופריטורים חיבור חיסור וכפל</title>
+    <script>
+        var lives;
+        var score;
+        function init()
+        {
+            score="no "+"score "+(6*8)/*ניתן להגדיר שמשתנה הוא מילה ולהוסיף לו מילים נוספות ומספרים כך*/
+            lives = 7;
+           /* score = 200;/*
+            /* score=score+10;*/    /*אם נרצה להוסיף למשתנה עוד 10 נק נרשום כך*/
+            /*score+=10 ; */         /*או לחילופין בצורה יותר מהירה כך :משמאל*/
+            /*score++;*/            /*כדי להוסיף אחד או כדי לחסר אחד נשתמש ב--*/
+            /*score-=10*;/           /*כנ"ל גם במינוס*/
+           /* score=lives*100;*/     /*הגדרת משתנה א באמצעות השוואתו למששתנה ב המוכפל במס*/
+           /*score=100/lives;*/            /*כנל בחילוק*/
+            /*score=20%lives;*/      /*אחוז נותן שארית*/
+
+
+            document.getElementById("idlives") .innerHTML = lives;
+            document.getElementById("idscore") .innerHTML = score;
+        }
+    </script>
+</head>
+
+<body onload="init()">
+<div class="allsite">
+    <div class="inputs">
+        <label for="">פסילות:</label><span id="idlives">0</span>
+        <br>
+        <label for="">ניקוד:</label><span id="idscore">0</span>  
+    </div>
+</div>
+</body>
+</html>

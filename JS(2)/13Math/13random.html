@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>יצירת מס אקראי ופקודות מתמטיקה נוספות באמצעות דוגמאת קוביה</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function init()
+            {
+                
+            }
+            function onRollDiceClick()
+            {
+                var rnd=Math.random()*6;/*בהכפלה ב6 בעצם נאמר לרנדום לתת לנו מס עד 6*//*מאט רנדום יוצרת מס עשרוני בין 0ל1*/
+                /*rnd=Math.round(rnd)/*ראונד יעגל את המס העשרונים למס השלם הקרוב ביותר לדוגמא1.55 יציג כ-2*/
+                /*rnd=Math.floor(rnd)/*פלור יעגל את המס העשרוני כלפי מטה*/
+                rnd=Math.ceil(rnd)/*סיל יעגל את המס העשרוני שהתקבל באמצעות פונק רנדום כלפי מעלה*/
+                idimg.src="imagesmath/dice"+rnd+".jpg"/*השתמשתי במס שקיבלתי במשתנה המעוגל לאחר הפונקציה סיל כדי לשנות את מס התמונה*/
+                /*ייראה כאילו הקוביה מתחלפת */
+
+                idspan.innerHTML =rnd;/*יציג את התוצאה של משתנה רנדום */
+                /*באמצעות הוספת 1 לרנד בשורה זו נוכל להשתמש למעלה בפונקציית מתמטיקה שמעגלת כלפי מטה*/
+            }
+         </script>
+    </head>
+    <body onload="init()">
+        <div>welcome to the casino</div>
+        <img id="idimg" src="imagesmath/darker.png" width="150"> <!--נכניס כאן את התמונה ההתחלתית-->
+        <h2>you got:<span id="idspan"></span></h2>
+        <button onclick="onRollDiceClick()">Roll dice</button>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פונקציה שמחזירה ערך + בסרטון מפיע פונקציה שמראה איך לעשות פסיקים למספר ארןך</title>
+    <script>
+        function init()
+        {
+
+        }
+        function onCalcVat()/*תקרא לפונקציה בשם צקוואט ותחיל אותה על האינפוט שהיוזר הכניס */
+        {
+           //1 checkVAT(id_price_input.value)/*נקודה וואליו הופך את מה שהזין המשתמש לער של המשתנה איידיפרייס*/
+           id_score_span.innerHTML=returnVAT(id_price_input.value)/* הוואליו יהפוך את מה שהיוזר הכניס בתור המשתנה שייקרא גם פרייס בהמשך לערך*/
+           /*כאן יישלח לריטרןוואט את הסכור אחרי שהמיר אותו לערך בעזרת הוואליו*/
+        }
+        function returnVAT(_price)/*3 יעביר לו מה שבסוגריים את המחיר שאני רוצה להשתמש בו*//*זה נקרא פונקציה שמחזירה ערך */
+        /*היתרונות שלה הם שלא מדברים עם אף אלמנט בבודי כך שנוכל להשתמש בהם גם בכל אפליקציה אחרת */
+        {/*תיקח את המשתנה פרייס שהמשתמש הכניס תכפיל ותחזיר את הערך החדש*/
+            var rt;
+            rt=_price*1.17;
+            return rt;/*יחזיר את הערך שהתקבל לאחר ההכפלה*/
+        }
+        
+         //function checkVAT(_price)/*2פונציה זו תיקח את האינפוט תכפיל אותו ב1.17 ותציג את התוצא בספאן שמיועד לכך*/
+        {
+           //1 id_score_span.innerHTML=_price*1.17;
+        }
+
+
+    </script>
+</head>
+<body onload="init()">
+    <h1>Tax Calculator 17%</h1>
+    <h2>enter price:</h2>
+    <input type="number" id="id_price_input">
+    <h2>price with tax: <span id="id_score_span"></span></h2>
+    <button onclick="onCalcVat()">חשב מס </button>
+
+    
+</body>
+</html>

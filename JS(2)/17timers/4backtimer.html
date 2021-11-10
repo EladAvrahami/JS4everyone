@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> חלק רביעי לחציה על כפתור שיתחיל ספירה לאחור ויעביר אותי לעמ חדש בסוף הספירה </title>
+    <script>
+        var counter;
+        var timerindex;
+         function init(){
+            counter=5;/*יתחיל ספירה לאחור ממס 5 */
+            timerindex=0;/*יקבל ערך 0 כדי שנוכל לומר ללחיצה לבצע את החזרה של הצגת ההלו 5 פעמים רק כאשר נלחץ בפעם הראשונה*/
+        }
+        function onstartClick(){
+            if(timerindex==0){/*נוסיף תנאי שיפעל רק שהטיימר אינדקס יהיה אפס כדי שיעבוד רק בלחיצנ הרשונה וידפיס שלום 5 פעמים*/
+            timerindex=setInterval(writeHello,500)
+            }
+        }
+
+
+        function writeHello(){
+            counter--;
+            if(counter<=0){
+                window.open("https://www.w3schools.com/jsref/met_win_open.asp","_self");/*בסוף הספירה פקודה זו תעביר אותי לאתר שמסביר על איך פקודה זו עובדת */
+                clearInterval(timerindex); /*הקליר אינטרוול זו פקודה שעוצרת את כמות החזרות לאחר כל 2 שניות*/
+                /*הטיימר אינדקס שבסוגריים בעצם משמש כמעיין תז שאומר לקליר איזה אינטרוול לעצור במידה ויהיו כמה כאלו*/
+               
+            }
+            id_h2.innerHTML=counter;/*הורדתי את סימן הפלוס כדי שיציג כל פעם את הקאונטר שיורד באותו רגע לאפקט הספירה*/
+        }
+
+
+    </script>
+</head>
+<body onload="init()">
+    <h2 id="id_h2"></h2>
+    <button onclick="onstartClick()">start</button>
+    
+</body>
+</html>

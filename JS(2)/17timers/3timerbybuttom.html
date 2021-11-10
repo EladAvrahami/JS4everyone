@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> חלק שלישי בלמידה השפעה על כמות הפעמים שיבוצע האינטרוול בעזרת תנאיועם שימוש בכפתור כדי שיתחיל </title>
+    <script>
+        var counter;
+        var timerindex;
+         function init(){
+            counter=0;
+            timerindex=0;/*יקבל ערך 0 כדי שנוכל לומר ללחיצה לבצע את החזרה של הצגת ההלו 5 פעמים רק כאשר נלחץ בפעם הראשונה*/
+        }
+        function onstartClick(){
+            if(timerindex==0){/*נוסיף תנאי שיפעל רק שהטיימר אינדקס יהיה אפס כדי שיעבוד רק בלחיצנ הרשונה וידפיס שלום 5 פעמים*/
+            timerindex=setInterval(writeHello,500)
+            }
+        }
+
+
+        function writeHello(){
+            counter++;
+            if(counter>=5){
+                clearInterval(timerindex); /*הקליר אינטרוול זו פקודה שעוצרת את כמות החזרות לאחר כל 2 שניות*/
+                /*הטיימר אינדקס שבסוגריים בעצם משמש כמעיין תז שאומר לקליר איזה אינטרוול לעצור במידה ויהיו כמה כאלו*/
+            }
+            id_h2.innerHTML+="hello , "
+        }
+
+
+    </script>
+</head>
+<body onload="init()">
+    <h2 id="id_h2"></h2>
+    <button onclick="onstartClick()">start</button>
+    
+</body>
+</html>

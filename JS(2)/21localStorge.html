@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <script>
+        function init(){//התנאי בפונקציה זו ייבדוק האם קיים בלוקלסטוג ערך במידה וכן יציג אותו כחלק מהטקסט
+        //לא יפעל לאחר לחיצה על דיליט כי דליט מוחק את הערך בזיכרון המקומי
+            if(localStorage.user){
+                id_h2.innerHTML="wlcome "+localStorage.user;
+            }
+
+        }
+        function onloginclick(){//פקודה שמטרתה להגדיר משתנה של שם המשתמש בלחיצה על כפתור
+            localStorage.setItem("user",id_input.value);//  סט אייטמס היא מתודה פונקציה פנימית של לוקלסטורג המכילה בסוגריים שני משתנים המשתנה הראשון שם המשתנה שיוצג על המסך ומשתנה שני את המידע שמכיל אותו משתנה
+            id_h2.innerHTML= "welcome "+localStorage.user;
+            //ניתן לראות את השמירה של הערך השמי שהכנסנו בכלים למפתחים אפליקשיין לוקלסטורג
+        }
+        function ondeleteclick(){//פקודה שמטרתה למחוק מהזיכרון המקומי במכשיר ערך ספציפי
+            localStorage.removeItem("user");// ניתן להשתמש גם בנקודה קלייר כדי למחוק משתנים מרובים במידה ויש
+            id_h2.innerHTML="welcom new user please enter your name up";
+
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body onload="init()">
+    <div class="container">
+        <h1>enter your name:</h1>
+        <input id="id_input" type="text">
+        <button onclick="onloginclick()">log in</button>
+        <h2 id="id_h2">welcom guest to our site</h2>
+        <button onclick="ondeleteclick()">delete user</button>
+    </div>
+
+    
+</body>
+</html>

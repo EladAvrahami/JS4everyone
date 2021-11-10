@@ -1,0 +1,8 @@
+body{margin: 0; background-color: silver; }
+.all_site{max-width: 960px;background-color: white;margin: 0 auto;min-height: 500px;padding: 10px;}
+div{border: 2px solid black;}
+.products{width: 50%;}
+.products.product{width: 25%;min-height: 400px;float: left;border: solid 1px;padding: 8px;box-sizing: border-box;}
+.products.product h2{text-align: center;}
+.products.product p{padding-left: 7px;}
+.product img{ width: 50%;height: 50%;}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>כפתור שיעביר תמונות</title>
+    <script>
+        function init()
+        {
+            declareBtns();
+        }
+                                              /*  כפתור 2 באמצעות הסקריפט לא עובד מסיבות לא ידועות */
+        function declareBtns()
+        {
+            id_change_btn.onclick =onChangeImageClick;
+        }
+
+        function onChangeImageClick()/*ניתן שם שאומר מה הפונקצייה עושה */
+        {
+            idh2.innerHTML ="HAHAHA it's CORONA time!";
+            idimg.src ="images/dogwithmask.jpg";
+        }
+
+    </script>
+</head>
+<body onload="init">
+    <h2 id="idh2">THAILAND???</h2>
+    <img id="idimg" src="images/tailand.jpg">
+    <br><br>
+    <button onclick="onChangeImageClick()">Change image in tag</button><!--הכנסתי מאפייןאון קליק שקורא לפונקציה שיצרתי מעלה-->
+    <button id="id_change_btn">change image with js</button>
+</body>
+</html>

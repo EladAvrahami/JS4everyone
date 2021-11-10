@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מודולריות שהתגיות כלולות בתבנית</title>
+    <style>
+        body {direction: rtl; font-family: Arial, Helvetica, sans-serif; }
+        div{height: 100px;width: 400px;border: 2px solid black;}
+        p{font: size 20px;}
+        </style>
+    <script>
+function init()
+{
+createdives(id_body,"red","אובייקט צבע דיב וכותרת זאת ")
+createdives(_div,"green"," pp")
+createdives(h2div,"red","כותרת")
+
+}
+
+function createdives(obj,color,_nameseries)
+{   
+obj.innerHTML+=_nameseries;
+obj.style.backgroundColor=color;
+
+
+}
+
+    </script>
+</head>
+<body onload="init()" id="id_body">
+    <div id="_div">
+        <h2 id="h2div"></h2>
+    </div>
+
+
+    
+</body>
+</html>

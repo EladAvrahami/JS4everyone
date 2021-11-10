@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="קובץ סיאסאס פקטיביבשביל הדוגמא">
+    <script>
+        var lives;/*נרשום תחילה את המשתנים כדי שבהמשך כל הפונקציות העתידיות יכירו אותם*/
+        var score;
+        function init()
+        {
+            lives = 5;
+            score = 200;
+            document.getElementById("idlives") .innerHTML = lives;
+            /*נפנה לכל המסמך*/
+            /*נוסיף גט אלמנטלפי תז כדי לתת לחיים את הערך שבפונקציה*/
+            /*אינהיירט ידאג להעביר את הערך החדש שנתנו לו לתוכן של התגית לפי התז בתבנית מטה*/
+            document.getElementById("idscore") .innerHTML = score;
+            /*נשנה את המשתנה שנרצה שתוכנו יוחלף באמצעות החלפת התז*/
+            /*נגדיר בסוף הפונקציה שהערך החדש יהיה אחד המשתנים ונרשום את שמו מה שיירש גם את תוכנו לתבנית מטה */
+        }
+    </script>
+</head>
+
+<body onload="init()"><!--יאמר לפונקציה למעלה לפעול רק אחרי העלאת כל האתר-->
+<div class="allsite">
+    <div class="inputs">
+        <label for="">פסילות:</label><span id="idlives">0</span>
+        <br>
+        <label for="">ניקוד:</label><span id="idscore">0</span>  
+    </div>
+</div>
+</body>
+</html>

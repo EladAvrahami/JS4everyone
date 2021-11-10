@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        window.onload=function(){//ווינדואו.אוןלאוד זה כמו לרשום פונקציית אייןאיט
+        var str="You Are The Best monkey "
+        id_h2.innerHTML+=str+"<br>"
+
+        var lowerStr=str.toLowerCase();//טולאורקייס יהפוך לי את כל האותיות במשפט לקטנות
+        id_h2.innerHTML+="toLowerCase:"+lowerStr+"<br>";
+
+        var upperStr=str.toUpperCase();//טואפפרקייס יהפוך לי את כל האותיות במשפט לגדולות
+        id_h2.innerHTML+="toUpperCase:"+upperStr+"<br>";
+
+        var len=str.length;//ייתן לי את מס התווים במשפט(הסטרינג)שרשמתי (גםרווח נחשב כתו) length 
+        id_h2.innerHTML+="str.length:"+len+"<br>";
+        
+        var indexOf =str.indexOf("monkey");//אינדקסאוף ייתן לי את המס של התווים שלאחריהם יופיע הערך שבסוגריים 
+        id_h2.innerHTML+="index of monkey"+indexOf+"<br>";
+        var indexOf =str.indexOf("e",7);//השניה המופיע בטקסט נרשום בסוגריים פרמטר מספרי המסמל מיקום אותיות שממנו תתחיל הסריקה eבמידה ונרצה למצוא את מיקומה של האות  
+        //בחרתי בדוגמא הזאת ב7 כי האותי אי מופיע לראשונה לאחר 6 תווים ולכן אם נזין שהחיפשו יתבמע מהתא 7 הוא יימצא לי את הבאה בתור 
+        id_h2.innerHTML+="index of the seccend 'e' letter:" +indexOf+"<br>";//שים לב במידה וסטכרינג שאנו מחפשים שרשמנו בסוגריים לא קיים בטקבט תתקבל תוצאה על המסך -1
+        
+        var replace=str.replace("Best","Losser");//ריפלייס יחליף את המילה הראשונה במילה השניה שנרשום
+        id_h2.innerHTML+="replace:"+replace+"<br>";
+
+        var substr=str.substr(4,7);//יציג לי מתא מס 4  7תאים קדימה 
+        id_h2.innerHTML+="substr:"+substr+"<br>";
+        
+        var substring=str.substring(4,6);//ייציג לי מתא מספר 4 עד תא מס 6
+        id_h2.innerHTML+="substring:"+substring+"<br>";
+
+        var sub_ar=str.split(" ");//נהפוך את המשפט למערך כאשר כל תא במערך יקבל את הערך של המילה במשפט שמגיע לאחר רווח
+        console.log(sub_ar);//ניתן לראות את המהפך בקונסול
+
+        }
+
+
+
+    </script>
+    <title>פקודות המשפיעות על הסטרינג+הפיכת סטרינג למערך</title>
+</head>
+<body>
+    <div>
+        <h2 id="id_h2"></h2>
+    </div>
+</body>
+</html>

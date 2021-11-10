@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>עונה 3 סרטון4</title>
+    <script>
+        function init()/*פונקציה זו מופעלת באמצעות האונלאוד ומפעילה בתוכה עוד פונקציה שמשנה עיצוב ומלל*/
+        {
+            /*changeH2();*//*הורדתי את זה כדי שנראה את הכפתור בפעולה*/
+        }
+        function changeH2()/*כתבתי פה פונקציה שמשנה את מלל וצבע הכותרת*/
+        /*אחרי שהכרזתי על פונקציה אצטרך להפעיל אותה או באמצעות האונלאוד או באמצעות פונקציה אחרת */
+        {
+            idh2.innerHTML = "javaScript";
+            idh2.style.color = "blue";
+        }
+    </script>
+</head>
+<body onload="init()"><!--באמצעות האונלואוד איניט יפעיל את הפונקציה רק אחרי שיעלה את האתר-->
+    <h2 id="idh2">h2</h2>
+    <br>
+    <button onclick="changeH2()">הקש כאן</button><!--אוןקליק זה סוג של אירוע שמפעיל פונקציה -->
+    <!--כאן לדוגמא כאשר נלחץ על הכפתור רק אז הכותרת תשתנה -->
+    
+</body>
+</html>

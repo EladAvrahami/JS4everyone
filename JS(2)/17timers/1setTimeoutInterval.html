@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>חלק ראשון בלמידה </title>
+    <script>/*נכיר שתי פונקציות חשובות */
+         function init(){
+            //setTimeout(writeHello,2000);/*ניתן לסטטייםאאוט את הערך של הפונקציה שנרצה להפעיל ואת הזמן שאחריו יתחיל לעבוד במיליסקנד*/
+            setInterval(writeHello,2000);/*אינטרוול יגרום לכך שהפעןלה תתבצע כל 2 שניות או כל כמה זמן שנרשום בערך ללא הפסקה*/
+        }
+        function writeHello(){
+            id_h2.innerHTML+="hello , "
+        }
+
+
+    </script>
+</head>
+<body onload="init()">
+    <h2 id="id_h2"></h2>
+    <button onclick="">start</button>
+    
+</body>
+</html>
